@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EAD0C4F3-CCB2-461E-B064-888A853A9667</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Checklists</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>17338F2EE8B35DE544E4370F8E2B712536625510</key>
+		<string>https://github.com/JasonFrancisFeng/CheckLists.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Checklists/Checklists.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>17338F2EE8B35DE544E4370F8E2B712536625510</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JasonFrancisFeng/CheckLists.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>17338F2EE8B35DE544E4370F8E2B712536625510</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>17338F2EE8B35DE544E4370F8E2B712536625510</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CheckLists</string>
+		</dict>
+	</array>
+</dict>
+</plist>
