@@ -96,25 +96,35 @@
 }
 
 
-
-- (IBAction)addItem:(id)sender {
-    NSInteger newRowIndex = [_items count];
-    ChecklistItem *item = [[ChecklistItem alloc]init];
-
-    item.text = @"我想回家了";
-    item.checked = NO;
-    [_items addObject:item];
-
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newRowIndex inSection:0];
-    NSArray *indexPaths = @[indexPath];
-    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
-}
-
 //滑动删除cell
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     [_items removeObjectAtIndex:indexPath.row];
     NSArray *indexPaths = @[indexPath];
     [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+- (void)addItemViewControllerDidCancel:(AddItemViewController *)controller{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)addItemViewController:(AddItemViewController *)controller didFinishAddingItem:(ChecklistItem *)item{
+    NSInteger newRowIndex = [_items count];
+    
+    [_items addObject:item];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newRowIndex inSection:0];
+    NSArray *indexPaths = @[indexPath];
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"AddItem"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+
+        AddItemViewController *controller = (AddItemViewController*) navigationController.topViewController;
+
+        controller.delegate = self;
+    }
 }
 
 @end
